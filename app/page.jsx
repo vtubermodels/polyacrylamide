@@ -1,10 +1,7 @@
-'use client';
-
 import Link from 'next/link';
 import { Card } from 'components/card';
 import { ContextAlert } from 'components/context-alert';
 import { Markdown } from 'components/markdown';
-import { RandomQuote } from 'components/random-quote';
 import { getNetlifyContext } from 'utils';
 
 const contextExplainer = `
@@ -94,13 +91,8 @@ export default function Page() {
       <section className="flex flex-col gap-4">
         <Card title="Runtime Context">
           <p>
-            {ctx
-              ? `This page was generated in ${ctx} mode.`
-              : 'Runtime context not detected.'}
+            {ctx ? `This page was generated in ${ctx} mode.` : 'Runtime context not detected.'}
           </p>
-        </Card>
-        <Card title="Random Industry Quote">
-          <RandomQuote />
         </Card>
       </section>
     </main>
