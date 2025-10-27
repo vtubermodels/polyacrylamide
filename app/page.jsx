@@ -60,7 +60,7 @@ I’ve worked with both APAM and CPAM in water treatment projects. APAM tends to
 
 ### Conclusion
 
-Whether you choose **anionic** or **cationic polyacrylamide** depends on your specific treatment goal and the type of particles you’re separating. Both play a crucial role in modern water management, ensuring efficiency, sustainability, and cleaner industrial processes.  
+Whether you choose **anionic** or **cationic polyacrylamide** depends on your specific treatment goal and the type of particles you’re separating. Both play a crucial role in modern water management, ensuring efficiency, sustainability, and cleaner industrial processes.
 `;
 
 export default function Page() {
@@ -70,7 +70,9 @@ export default function Page() {
     <main className="flex flex-col gap-12 sm:gap-16 p-8">
       <section>
         <ContextAlert className="mb-6" />
-        <h1 className="mb-4 text-2xl font-semibold">Polyacrylamide: Anionic & Cationic Types Explained</h1>
+        <h1 className="mb-4 text-2xl font-semibold">
+          Polyacrylamide: Anionic & Cationic Types Explained
+        </h1>
         <p className="mb-6 text-lg">
           Explore how Polyacrylamide, in its anionic and cationic forms, is transforming industries like water treatment, paper production, and agriculture.
         </p>
@@ -90,8 +92,16 @@ export default function Page() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <Markdown content={'### Random Industry Quote'} />
-        <RandomQuote />
+        <Card title="Runtime Context">
+          <p>
+            {ctx
+              ? `This page was generated in ${ctx} mode.`
+              : 'Runtime context not detected.'}
+          </p>
+        </Card>
+        <Card title="Random Industry Quote">
+          <RandomQuote />
+        </Card>
       </section>
     </main>
   );
